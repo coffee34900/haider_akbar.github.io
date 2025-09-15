@@ -758,7 +758,36 @@ section .container {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  max-width: 280px;
+}
+
+@media (min-width: 992px) {
+  .portfolio .portfolio-item {
+    max-width: 260px;
+  }
+}
+
+.portfolio .portfolio-item img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio .portfolio-item:hover img {
+  transform: translateY(-6px);
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  padding: 20px 18px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 16px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .portfolio #portfolio-flters {
@@ -1171,4 +1200,60 @@ section .container {
 
 .credits a:hover {
   color: #fff;
+}
+/*--------------------------------------------------------------
+# Quantum Placeholder
+--------------------------------------------------------------*/
+.quantum-page {
+  min-height: 100vh;
+  padding: 120px 15px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantum-card {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 45px 35px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.quantum-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.quantum-card p {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+}
+
+.quantum-card .cta {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #18d26e;
+  font-weight: 600;
+}
+
+.quantum-card .cta i {
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .quantum-card {
+    padding: 32px 24px;
+  }
+
+  .quantum-card h2 {
+    font-size: 22px;
+  }
 }
